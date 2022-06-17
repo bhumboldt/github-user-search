@@ -1,0 +1,13 @@
+.footer-container {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  background-color: inherit;
+}
+
+.footer-item {
+  margin: 16px
+}

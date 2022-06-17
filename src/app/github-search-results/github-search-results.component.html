@@ -1,0 +1,6 @@
+<div class="results-container">
+  <h1>{{ totalUsers }} user{{ totalUsers === 1 ? ' was found that matches' : 's were found that match'}}</h1>
+  <div *ngFor="let user of users">
+    <app-github-user-details [user]="user"></app-github-user-details>
+  </div>
+</div>

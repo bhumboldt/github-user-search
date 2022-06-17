@@ -1,3 +1,4 @@
+import { GitHubSearchResults } from './../../models/GitHubSearchResults';
 import { environment } from './../../../environments/environment.prod';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpService } from './../http/http.service';
@@ -8,7 +9,7 @@ import { Injectable } from '@angular/core';
 })
 export class GithubSearchService {
 
-  private userSearchResults$: BehaviorSubject<{}> = new BehaviorSubject({});
+  private userSearchResults$: BehaviorSubject<GitHubSearchResults> = new BehaviorSubject({} as any);
 
   constructor(private httpService: HttpService) { }
 
@@ -20,7 +21,7 @@ export class GithubSearchService {
     });
   }
 
-  getSearchResults(): Observable<{}> {
+  getSearchResults(): Observable<GitHubSearchResults> {
     return this.userSearchResults$.asObservable();
   }
 }

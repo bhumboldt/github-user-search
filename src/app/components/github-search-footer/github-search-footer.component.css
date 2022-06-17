@@ -1,11 +1,13 @@
 .footer-container {
   width: 100%;
+  max-width: 900px;
   flex-wrap: wrap;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: white;
   background-color: inherit;
+  margin: auto;
 }
 
 .footer-item {

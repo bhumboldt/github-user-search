@@ -1,7 +1,8 @@
 <div class="search-container">
-  <h1>Search for a GitHub user below!</h1>
+  <h1>Search for GitHub users below</h1>
   <div class="search-bar-container">
-    <input class="search-input" type="text" placeholder="Enter Search Text" />
-    <button class="search-button">Search</button>
+    <input class="search-input" (keyup.enter)="search()" [(ngModel)]="currentSearchInput" type="text" placeholder="Enter Search Text" />
+    <button class="search-button" [disabled]="!currentSearchInput" (click)="search()">Search</button>
   </div>
+  <app-github-search-results *ngIf="currentResults && currentResults.length" [totalUsers]="totalSearchResults" [users]="currentResults"></app-github-search-results>
 </div>

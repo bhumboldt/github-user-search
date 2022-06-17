@@ -5,3 +5,11 @@
   align-items: stretch;
   justify-content: space-between;
 }
+
+.divider {
+  width: calc(100% - 32px);
+  max-width: 900px;
+  height: 1px;
+  background-color: var(--primary-border-color);
+  margin: 32px auto 16px auto;
+}

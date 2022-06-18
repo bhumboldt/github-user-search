@@ -19,7 +19,6 @@ export class GithubUserDetailsComponent implements OnInit {
   ngOnInit(): void {
     // this.http.get(this.user!.url!).subscribe(x => {
     //   this.userInfo = x;
-    //   console.log(x);
     // }, error => {
     //   console.error(error);
     // })

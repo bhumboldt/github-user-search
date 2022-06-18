@@ -21,12 +21,9 @@ export class GithubSearchPaginationComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(this.pages);
     if (this.pages.length >= 2) {
       this.nextPage = this.currentPage !== this.pages.length ? this.currentPage + 1 : 0;
       this.previousPage = this.currentPage !== 1 ? this.currentPage - 1 : 0;
-      console.log(this.currentPage);
-      console.log(this.previousPage);
     }
   }
 }

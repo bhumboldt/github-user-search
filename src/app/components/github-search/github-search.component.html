@@ -1,8 +1,9 @@
 <div class="search-container">
   <h1>Search for GitHub users below</h1>
   <div class="search-bar-container">
-    <input class="search-input" (keyup.enter)="search()" [(ngModel)]="currentSearchInput" type="text" placeholder="Enter Search Text" />
-    <button class="search-button" [disabled]="!currentSearchInput" (click)="search()">Search</button>
+    <input class="search-input" (keyup.enter)="getPageOfSearchResults()" [(ngModel)]="currentSearchInput" type="text" placeholder="Enter Search Text" />
+    <button class="search-button" [disabled]="!currentSearchInput" (click)="getPageOfSearchResults()">Search</button>
   </div>
   <app-github-search-results *ngIf="currentResults && currentResults.length" [totalUsers]="totalSearchResults" [users]="currentResults"></app-github-search-results>
+  <app-github-search-pagination *ngIf="pages && pages.length > 1" [currentPage]="currentPage" [pages]="pages" (pageChanged)="getPageOfSearchResults($event)"></app-github-search-pagination>
 </div>

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GitHubUser } from '../models/GitHubUser';
+import { GitHubUser } from '../../models/GitHubUser';
 
 @Component({
   selector: 'app-github-search-results',

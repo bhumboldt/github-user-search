@@ -1,4 +1,5 @@
 export interface GitHubUser {
+  id?: string;
   avatar_url?: string;
   login?: string;
   url?: string;
@@ -12,4 +13,6 @@ export interface GitHubUser {
   following?: number;
   bio?: string;
   location?: string;
+  starred?: number;
+  html_url: string;
 };

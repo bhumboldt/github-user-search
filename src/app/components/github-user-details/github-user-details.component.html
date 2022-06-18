@@ -1,0 +1,17 @@
+<div class="user-container">
+  <div class="user-container-header" (click)="openGithubProfile()">
+    <img class="user-profile-photo" [src]="user.avatar_url" />
+    <span class="user-name primary-text">{{ userInfo ? userInfo.name : '' }}</span>
+    <span class="user-login primary-text">{{ user.login }}</span>
+    <div class="stats-container">
+      <i class="fa-solid fa-user-group icon"></i>
+      <span class="primary-text">{{ userInfo ? userInfo.followers : 0 }}</span>
+      <i class="fa-solid fa-code-branch icon"></i>
+      <span class="primary-text">{{ userInfo ? userInfo.public_repos : 0 }}</span>
+    </div>
+  </div>
+
+  <div class="user-container-body">
+    <p class="primary-text">{{ userInfo ? userInfo.bio : '' }}</p>
+  </div>
+</div>

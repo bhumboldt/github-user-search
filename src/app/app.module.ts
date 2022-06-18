@@ -10,8 +10,10 @@ import { GithubSearchFooterComponent } from './components/github-search-footer/g
 import { GithubSearchComponent } from './components/github-search/github-search.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { GithubSearchResultsComponent } from './github-search-results/github-search-results.component';
-import { GithubUserDetailsComponent } from './github-user-details/github-user-details.component';
+import { GithubSearchResultsComponent } from './components/github-search-results/github-search-results.component';
+import { GithubUserDetailsComponent } from './components/github-user-details/github-user-details.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { GithubSearchPaginationComponent } from './components/github-search-pagination/github-search-pagination.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +23,16 @@ import { GithubUserDetailsComponent } from './github-user-details/github-user-de
     GithubSearchFooterComponent,
     GithubSearchComponent,
     GithubSearchResultsComponent,
-    GithubUserDetailsComponent
+    GithubUserDetailsComponent,
+    GithubSearchPaginationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

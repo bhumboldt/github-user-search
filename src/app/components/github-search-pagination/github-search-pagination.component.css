@@ -1,0 +1,15 @@
+:host {
+  width: 100%;
+}
+
+.pagination-container {
+  width: 100%;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.current-page {
+  margin: 0 16px;
+}

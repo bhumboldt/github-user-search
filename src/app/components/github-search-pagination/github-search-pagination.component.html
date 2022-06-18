@@ -1,0 +1,5 @@
+<div class="pagination-container">
+  <span *ngIf="previousPage" (click)="pageChanged.emit(previousPage)" class="link">Prev</span>
+  <span class="primary-text current-page">{{ currentPage }}</span>
+  <span *ngIf="nextPage" (click)="pageChanged.emit(nextPage)" class="link">Next</span>
+</div>
